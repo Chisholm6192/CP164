@@ -1,0 +1,148 @@
+Assignment 3 Testing
+Ryan Chisholm
+chis7577@mylaurier.ca
+
+
+Task 1
+source = Stack()
+
+source.push(24)
+source.push(34)
+source.push(12)
+source.push(56)
+source.push(22)
+source.push(9)
+source.push(2)
+
+target1, target2 = stack_split_alt(source)
+
+print('target1')
+for i in target1:
+    print(i)
+    
+print()
+
+print('target2')
+for i in target2:
+    print(i)
+   
+OUTPUT:
+target1
+24
+12
+22
+2
+
+target2
+34
+56
+9
+
+
+
+
+Task 2
+source = Stack()
+
+source.push(12)
+source.push(98)
+source.push(23)
+source.push(67)
+source.push(12)
+source.push(18)
+source.push(1)
+
+target1, target2 = source.split_alt()
+
+for i in target1:
+    print(i)
+    
+    
+print()
+
+
+for i in target2:
+    print(i)
+
+OUTPUT:
+target1
+12
+23
+12
+1
+
+target2
+98
+67
+18
+
+
+
+Task 3
+
+Test 1: Hello World
+OUTPUT: False
+
+Test 2: Otto, otto
+OUTPUT: True
+
+Test 3: reversed is si desrever
+OUTPUT: True
+
+
+
+Task 4
+
+Test 1: 6 12 * 23 + 0.5 * 1.5 * 10 /
+OUTPUT: 7.125
+
+Test 2: 6 12 / 4 * 4 -
+OUTPUT: -2.0
+
+Test 3: 75 3 / 32 + 2 *
+OUTPUT: 114.0
+
+
+
+Task 5
+
+Test 1: {'Start': ['A'], 'A':['B', 'C'], 'B':[], 'C':['D', 'E'],
+    'D':[], 'E': ['X', 'F'], 'F':['G'], 'G':['C']}
+
+OUTPUT: ['A', 'C', 'E', 'X']
+
+
+Test 2: {'Start': ['A'], 'A':[]}
+OUTPUT: ['A']
+
+Test 3: {'Start': ['A'], 'A':['B', 'C', 'D'], 'B':['E'], 'C':['F', 'G', 'H'],
+    'D':['I'], 'E': [], 'F':['J', 'K'], 'G':['L', 'X'], 'H' : [], 'I' : ['K', 'L'],
+    'J' : ['I'], 'K' : [], 'L' : [] }
+
+OUTPUT: ['A', 'D', 'I', 'L', 'K', 'C', 'H', 'G', 'X']
+
+
+
+
+Task 6
+
+Test 1: is_mirror_stack("m", "abc", "m")
+OUTPUT: Mirror: is a mirror
+
+Test 2: is_mirror_stack("Ama", "Aabc", "m")
+OUTPUT: Mirror: L and R don't match
+
+Test 3: is_mirror_stack("abacmcabab", "abc", "m")
+OUTPUT: Mirror: too many characters in R
+
+Test 4: is_mirror_stack("abacmcab", "abc", "m")
+OUTPUT: Mirror: too many characters in L
+
+Test 5: is_mirror_stack("abaccab", "abc", "m")
+OUTPUT: Mirror: no mirror character
+
+
+
+
+
+
