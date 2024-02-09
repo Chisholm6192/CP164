@@ -1,0 +1,325 @@
+CP164 Lab#2
+Ryan Chisholm
+chis7577@mylaurier.ca
+
+Task 1
+s = Stack()
+print(s.is_empty())
+s.push(6)
+s.push(10)
+
+print(list(s))
+
+s.pop()
+print(list(s))
+
+value = s.peek()
+print(value)
+
+OUTPUT:
+True
+[10, 6]
+[6]
+6
+
+
+
+Task 2
+s = Stack()
+
+source = [11, 22, 33, 44, 55]
+print(source)
+
+array_to_stack(s, source)
+
+print(list(s))
+
+OUTPUT:
+[11, 22, 33, 44, 55]
+[11, 22, 33, 44, 55]
+
+
+
+
+Task 3
+s = Stack()
+s.push(55)
+s.push(44)
+s.push(33)
+s.push(22)
+s.push(11)
+
+target = []
+print(list(s))
+
+stack_to_array(s, target)
+
+print(target)
+
+OUTPUT:
+[11, 22, 33, 44, 55]
+[55, 44, 33, 22, 11]
+
+
+
+
+Task 4
+s = Stack()
+
+stack_test(s) #test empty stack
+
+s.push(1) #add to stack
+s.push(2)
+
+stack_test(s) #test non-empty stack
+
+OUTPUT:
+is_empty on Empty stack : True
+push(10) and push(2) on Empty stack : [2, 10]
+pop() remove all values from stack : []
+is_empty on non-empty stack : False
+pop() remove some but not all values from stack: 
+Stack: 
+1
+push() value back onto stack
+Stack: 
+2
+1
+peek() of stack : 2
+
+
+
+
+Task 5
+fh = open('movies.txt', 'r', encoding = 'utf-8')
+
+fh_list = list(fh)
+
+movies = read_movies(fh_list)
+
+s = Stack()
+
+for i in movies:
+    s.push(i)
+
+stack_test(s)
+
+fh.close()
+
+OUTPUT:
+is_empty on non-empty stack : False
+pop() remove some but not all values from stack: 
+Stack: 
+Title:    Wonder Woman
+Year:     2017
+Director: Patty Jenkins
+Rating:   8.1
+Genres:   fantasy, action
+Title:    Z
+Year:     1969
+Director: Costa-Gavras
+Rating:   8.2
+Genres:   drama
+Title:    Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?, The
+Year:     1964
+Director: Ray Dennis Steckler
+Rating:   2.2
+Genres:   horror
+Title:    Manos: The Hands of Fate
+Year:     1966
+Director: Harold P. Warren
+Rating:   1.9
+Genres:   horror
+Title:    Finding Dory
+Year:     2016
+Director: Andrew Stanton, Angus MacLane
+Rating:   7.5
+Genres:   comedy
+Title:    Wrong Box, The
+Year:     1966
+Director: Bryan Forbes
+Rating:   7.0
+Genres:   comedy
+Title:    Jason and the Argonauts
+Year:     1963
+Director: Don Chaffey
+Rating:   7.4
+Genres:   fantasy, action
+Title:    Horror of Dracula
+Year:     1958
+Director: Terence Fisher
+Rating:   7.4
+Genres:   horror
+Title:    Star Wars: Episode IV - A New Hope
+Year:     1977
+Director: George Lucas
+Rating:   8.7
+Genres:   science fiction, action
+Title:    Broken Flowers
+Year:     2005
+Director: Jim Jarmusch
+Rating:   7.2
+Genres:   romance, comedy
+Title:    Darjeeling Limited, The
+Year:     2007
+Director: Wes Anderson
+Rating:   7.1
+Genres:   comedy
+Title:    Juno
+Year:     2007
+Director: Jason Reitman
+Rating:   7.7
+Genres:   romance, comedy
+Title:    Stardust
+Year:     2007
+Director: Matthew Vaughn
+Rating:   7.7
+Genres:   fantasy, comedy
+Title:    Alphaville
+Year:     1965
+Director: Jean-Luc Godard
+Rating:   7.1
+Genres:   science fiction, comedy
+Title:    Last Man On Earth, The
+Year:     1964
+Director: Ubaldo Ragona
+Rating:   6.9
+Genres:   science fiction
+Title:    Omega Man, The
+Year:     1971
+Director: Boris Sagal
+Rating:   6.6
+Genres:   science fiction, action
+Title:    I Am Legend
+Year:     2007
+Director: Francis Lawrence
+Rating:   7.1
+Genres:   science fiction, action
+Title:    Zulu
+Year:     1964
+Director: Cy Endfield
+Rating:   7.8
+Genres:   war
+Title:    Dark City
+Year:     1998
+Director: Alex Proyas
+Rating:   7.8
+Genres:   science fiction
+Title:    Dellamorte Dellamore
+Year:     1994
+Director: Michele Soavi
+Rating:   7.2
+Genres:   romance, comedy, zombie, horror
+push() value back onto stack
+Stack: 
+Title:    Zulu
+Year:     2013
+Director: Jerome Salle
+Rating:   6.7
+Genres:   drama
+Title:    Wonder Woman
+Year:     2017
+Director: Patty Jenkins
+Rating:   8.1
+Genres:   fantasy, action
+Title:    Z
+Year:     1969
+Director: Costa-Gavras
+Rating:   8.2
+Genres:   drama
+Title:    Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?, The
+Year:     1964
+Director: Ray Dennis Steckler
+Rating:   2.2
+Genres:   horror
+Title:    Manos: The Hands of Fate
+Year:     1966
+Director: Harold P. Warren
+Rating:   1.9
+Genres:   horror
+Title:    Finding Dory
+Year:     2016
+Director: Andrew Stanton, Angus MacLane
+Rating:   7.5
+Genres:   comedy
+Title:    Wrong Box, The
+Year:     1966
+Director: Bryan Forbes
+Rating:   7.0
+Genres:   comedy
+Title:    Jason and the Argonauts
+Year:     1963
+Director: Don Chaffey
+Rating:   7.4
+Genres:   fantasy, action
+Title:    Horror of Dracula
+Year:     1958
+Director: Terence Fisher
+Rating:   7.4
+Genres:   horror
+Title:    Star Wars: Episode IV - A New Hope
+Year:     1977
+Director: George Lucas
+Rating:   8.7
+Genres:   science fiction, action
+Title:    Broken Flowers
+Year:     2005
+Director: Jim Jarmusch
+Rating:   7.2
+Genres:   romance, comedy
+Title:    Darjeeling Limited, The
+Year:     2007
+Director: Wes Anderson
+Rating:   7.1
+Genres:   comedy
+Title:    Juno
+Year:     2007
+Director: Jason Reitman
+Rating:   7.7
+Genres:   romance, comedy
+Title:    Stardust
+Year:     2007
+Director: Matthew Vaughn
+Rating:   7.7
+Genres:   fantasy, comedy
+Title:    Alphaville
+Year:     1965
+Director: Jean-Luc Godard
+Rating:   7.1
+Genres:   science fiction, comedy
+Title:    Last Man On Earth, The
+Year:     1964
+Director: Ubaldo Ragona
+Rating:   6.9
+Genres:   science fiction
+Title:    Omega Man, The
+Year:     1971
+Director: Boris Sagal
+Rating:   6.6
+Genres:   science fiction, action
+Title:    I Am Legend
+Year:     2007
+Director: Francis Lawrence
+Rating:   7.1
+Genres:   science fiction, action
+Title:    Zulu
+Year:     1964
+Director: Cy Endfield
+Rating:   7.8
+Genres:   war
+Title:    Dark City
+Year:     1998
+Director: Alex Proyas
+Rating:   7.8
+Genres:   science fiction
+Title:    Dellamorte Dellamore
+Year:     1994
+Director: Michele Soavi
+Rating:   7.2
+Genres:   romance, comedy, zombie, horror
+peek() of stack : Title:    Zulu
+Year:     2013
+Director: Jerome Salle
+Rating:   6.7
+Genres:   drama
+
