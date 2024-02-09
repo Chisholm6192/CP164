@@ -1,0 +1,189 @@
+"""
+-------------------------------------------------------
+Assignment 8
+-------------------------------------------------------
+Author:  Ryan Chisholm
+Email:   chis7577@mylaurier.ca
+Version: 2022-09-14
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+	BST 
+        3
+    1        5
+ 0    2    4    6
+
+	Target
+	   5
+     1       6
+       4
+	2
+
+BST == Target -> False
+
+BST is balanced -> True
+
+BST is valid -> True
+
+BST Min -> 0
+
+BST Leaf Count -> 4
+
+BST One Child Count -> 0
+
+BST Two Child Count -> 3
+
+Inorder -> 0 1 2 3 4 5 6 
+Preorder -> 3 1 0 2 5 4 6
+Postorder -> 0 2 1 4 6 5 3
+Levelorder -> 3 1 5 0 2 4 6
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+DATA1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+DATA2 = "MFTCJPWADHKNRUYBEIGLOQSVXZ"
+DATA3 = "ETAOINSHRDLUCMPFYWGBVKJXZQ"
+
+BST1 -> Data1
+BST2 -> Data2
+BST3 -> Data3
+
+Text in file was 'Random chunk of text'
+
+BST1
+Comparing by order: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Total Comparisons: 441
+
+BST2
+Comparing by order: MFTCJPWADHKNRUYBEIGLOQSVXZ
+Total Comparisons: 117
+
+BST3
+Comparing by order: ETAOINSHRDLUCMPFYWGBVKJXZQ
+Total Comparisons: 128
+-------------------------------------------------------
+
+-------------------------------------------------------
+t03
+DATA1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+DATA2 = "MFTCJPWADHKNRUYBEIGLOQSVXZ"
+DATA3 = "ETAOINSHRDLUCMPFYWGBVKJXZQ"
+
+BST1 -> Data1
+BST2 -> Data2
+BST3 -> Data3
+
+Text in file was 'Random chunk of text'
+
+
+BST1
+Letter Count/Percent Table
+
+Total Count: 17
+
+Letter  Count       %
+---------------------
+    A    1      5.88%
+    B    0      0.00%
+    C    1      5.88%
+    D    1      5.88%
+    E    1      5.88%
+    F    1      5.88%
+    G    0      0.00%
+    H    1      5.88%
+    I    0      0.00%
+    J    0      0.00%
+    K    1      5.88%
+    L    0      0.00%
+    M    1      5.88%
+    N    2     11.76%
+    O    2     11.76%
+    P    0      0.00%
+    Q    0      0.00%
+    R    1      5.88%
+    S    0      0.00%
+    T    2     11.76%
+    U    1      5.88%
+    V    0      0.00%
+    W    0      0.00%
+    X    1      5.88%
+    Y    0      0.00%
+    Z    0      0.00%
+
+
+
+BST2
+Letter Count/Percent Table
+
+Total Count: 17
+
+Letter  Count       %
+---------------------
+    M    1      5.88%
+    F    1      5.88%
+    T    2     11.76%
+    C    1      5.88%
+    J    0      0.00%
+    P    0      0.00%
+    W    0      0.00%
+    A    1      5.88%
+    D    1      5.88%
+    H    1      5.88%
+    K    1      5.88%
+    N    2     11.76%
+    R    1      5.88%
+    U    1      5.88%
+    Y    0      0.00%
+    B    0      0.00%
+    E    1      5.88%
+    G    0      0.00%
+    I    0      0.00%
+    L    0      0.00%
+    O    2     11.76%
+    Q    0      0.00%
+    S    0      0.00%
+    V    0      0.00%
+    X    1      5.88%
+    Z    0      0.00%
+
+
+
+BST3
+Letter Count/Percent Table
+
+Total Count: 17
+
+Letter  Count       %
+---------------------
+    E    1      5.88%
+    A    1      5.88%
+    T    2     11.76%
+    D    1      5.88%
+    O    2     11.76%
+    U    1      5.88%
+    C    1      5.88%
+    I    0      0.00%
+    S    0      0.00%
+    Y    0      0.00%
+    B    0      0.00%
+    H    1      5.88%
+    N    2     11.76%
+    R    1      5.88%
+    W    0      0.00%
+    Z    0      0.00%
+    F    1      5.88%
+    L    0      0.00%
+    P    0      0.00%
+    V    0      0.00%
+    X    1      5.88%
+    G    0      0.00%
+    K    1      5.88%
+    M    1      5.88%
+    Q    0      0.00%
+    J    0      0.00%
+
+-------------------------------------------------------
+
+-------------------------------------------------------
