@@ -1,0 +1,198 @@
+"""
+-------------------------------------------------------
+Assignment 9
+-------------------------------------------------------
+Author:  Ryan Chisholm
+Email:   chis7577@mylaurier.ca
+Version: 2023-04-03
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+Hash Set Array 
+Insert Words
+text -> "random chunk of text, my writing is not very good, please excuse the bad grammar, i apologizer in advance. Thanks, i appreciate it."
+
+OUTPUT:
+Using Array Based List Hash Set
+
+Insert Words
+writing: 2
+is: 2
+apologizer: 2
+random: 12
+chunk: 12
+of: 12
+text: 12
+not: 12
+good: 12
+excuse: 12
+the: 12
+i: 12
+thanks: 10
+it: 10
+my: 4
+very: 4
+please: 4
+advance: 4
+appreciate: 4
+bad: 2
+grammar: 2
+in: 2
+
+Comparison Total
+Total Comparisons: 160
+Word with most comparisons: random: 12
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+Hash Set Sorted List
+Insert Words
+text -> "random chunk of text, my writing is not very good, please excuse the bad grammar, i apologizer in advance. Thanks, i appreciate it."
+
+OUTPUT:
+Using Array Based Sorted List Hash Set
+
+Insert Words
+apologizer: 3
+is: 4
+writing: 3
+chunk: 21
+excuse: 17
+good: 18
+i: 17
+it: 15
+not: 17
+of: 16
+random: 15
+text: 15
+thanks: 19
+the: 18
+advance: 6
+appreciate: 6
+my: 8
+please: 6
+very: 6
+bad: 4
+grammar: 4
+in: 4
+
+Comparison Total
+Total Comparisons: 242
+Word with most comparisons: chunk: 21
+
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t03
+Linked BST Hash Set
+Insert Words
+text -> "random chunk of text, my writing is not very good, please excuse the bad grammar, i apologizer in advance. Thanks, i appreciate it."
+
+OUTPUT:
+Using Linked BST Hash Set
+
+Insert Words
+writing: 4
+is: 4
+apologizer: 4
+random: 24
+chunk: 24
+text: 16
+of: 19
+the: 15
+not: 19
+thanks: 15
+good: 21
+excuse: 17
+i: 20
+it: 19
+my: 10
+advance: 7
+very: 7
+appreciate: 7
+please: 7
+bad: 6
+grammar: 6
+in: 6
+
+Comparison Total
+Total Comparisons: 277
+Word with most comparisons: random: 24
+
+-------------------------------------------------------
+
+-------------------------------------------------------
+t04
+New BST Methods
+
+Node Count
+           5
+    3             7
+2      4       6     8
+
+zero: 4
+One: 0
+Two: 3
+
+
+           5
+    3             6
+2      4  
+          
+zero: 3
+One: 0
+Two: 2
+
+Contains
+BST = 
+           5
+    3             7
+2      4       6     8
+
+
+6 in BST = True
+5 in BST = True 
+10 in BST = False
+
+Parent
+BST = 
+           5
+    3             7
+2      4       6     8
+
+parent(6)
+value = 6
+parent node -> h: 2, v: 7
+
+pasrent(5)
+value = 5
+parent node -> None
+
+parent(10)
+value = None 
+parent node -> None
+
+
+Parent_r
+BST = 
+           5
+    3             7
+2      4       6     8
+
+parent_r(6)
+value = 6
+parent node = h: 2, v: 7
+
+parent_r(5)
+value = 5
+parent node -> None
+
+parent_r(10)
+value = None
+parent node -> 10
+-------------------------------------------------------
+
+-------------------------------------------------------
