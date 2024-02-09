@@ -1,0 +1,383 @@
+"""
+-------------------------------------------------------
+Assignment 5 Testing 
+-------------------------------------------------------
+Author:  Ryan Chisholm
+Email:   chis7577@mylaurier.ca
+Version: 2023-02-17
+-------------------------------------------------------
+"""
+-------------------------------------------------------
+t01
+Test Equal
+[10, 2] and [2, 10] -> False
+
+[10, 2] and [10, 2] -> True 
+
+[10, 2] and [] -> False
+
+[] and [] -> True
+
+
+Test Get Item
+source = [10, 12, 7]
+source[0] -> 10
+
+source = []
+source[0] -> Invalid Index value
+
+
+Test Append
+source = []
+source.append(1) -> [1]
+source.append(2) -> [1, 2]
+source.append(-2) -> [1, 2, -2]
+
+
+Test Clean
+source = [1, 2, 3, 2, 4, 4, 10, 3]
+source.clean() -> [1, 2, 3, 4, 10]
+
+source = []
+source.clean() -> []
+
+
+Test Combine
+target1 = [1, 2, 34, 7]
+target2 = [3, 6, 2]
+source.combine(target1, target2) -> [1, 3, 2, 6, 34, 2, 7]
+
+target1 = []
+target2 = [3, 6, 2]
+source.combine(target1, target2) -> [3, 6, 2]
+
+target1 = []
+target2 = []
+source.combine(target1, target2) -> []
+
+
+Test Intersection
+source1 = [1, 2, 8, 7]
+source2 = [3, 6, 8, 2, 8]
+target.intersection(source1, source2) -> [2, 8]
+
+source1 = []
+source2 = []
+target.intersection(source1, source2) -> []
+
+
+Test Prepend
+source = [10, 12, 3, 7, 3]
+source.prepend(2) -> [2, 10, 12, 3, 7, 3]
+
+source = []
+source.prepend(2) -> [2]
+
+
+Test Remove Front
+source = [2, 10, 12, 3, 7, 3]
+source.remove_front() -> [10, 12, 3, 7, 3]
+Returns 2
+
+source = [10]
+source.remove_front() -> []
+Returns 10
+
+
+Test Remove Many
+source = [10, 12, 3, 7, 3]
+source.remove_many(3) -> [10, 12, 7]
+
+source = [6, 6, 6, 6, 6]
+source.remove_many(6) -> []
+
+source = []
+source.remove_many(1) -> []
+
+source = [1, 2, 3, 4]
+source.remove_many(5) -> [1, 2, 3, 4]
+
+
+Test Split
+source = [10, 12, 3, 7, 3, 6]
+source.split() -> List 1 [10, 12, 3] - List 2 [7, 3, 6]
+
+source = [10, 12, 3, 7, 3, 6, 23]
+source.split() -> List 1 [10, 12, 3, 7] - List 2 [3, 6, 23]
+
+source = [1, 4, 7]
+source.split() -> List 1 [1, 4] - List 2 [7]
+
+source = [1]
+source.split() -> List 1 [1] - List 2 []
+
+source = []
+source.split() -> List 1 [] - List 2 []
+
+
+Test Split Alt
+source = [23, 2, 7, 34, 14]
+source.split_alt() -> List 1 [23, 7, 14] - List 2 [2, 34]
+
+source = [1]
+source.split_alt() -> List 1 [1] - List 2 []
+
+source = []
+source.split_alt() -> List 1 [] - List 2 []
+
+
+Test Union
+source1 = [1, 3, 5, 2, 5]
+source2 = [2, 5, 1, 2]
+union(source1, source2) -> [1, 3, 5, 2]
+
+source1 = [1, 3, 5]
+source2 = [2, 5, 1, 2]
+union(source1, source2) -> [1, 3, 5, 2]
+
+source1 = []
+source2 = [2, 5, 1, 2]
+union(source1, source2) -> [2, 5, 1]
+
+source1 =[]
+source2 = []
+union(source1, source2) -> []
+-------------------------------------------------------
+
+-------------------------------------------------------
+t02
+Test Contains
+source = [1, 5, 10, 10]
+3 in source -> False
+5 in source -> True
+
+source = []
+5 in source -> False
+
+
+Test Get Item
+source = [1, 5, 10, 10]
+source[0] -> 1
+source[2] -> 10
+source[-4] -> 1
+
+source = []
+source[0] -> invalid index value
+
+
+Test Equals
+source1 = [6, 9, 10, 12]
+source2 = [1, 2, 4, 5]
+source1 == source2 -> False
+
+source1 = [6, 9, 10, 12]
+source2 = [6, 9]
+source1 == source2 -> False
+
+source1 = [6, 9]
+source2 = [6, 9]
+source1 == source2 -> True
+//doesn't matter what order values are insered in, the list is auto sorted on insertion, so as long as they have the same values they are equal
+
+source1 =[6, 6, 9]
+source2 = [6, 9]
+source1 == source2 -> False
+
+source1 = [-2, 6, 9]
+source2 = [2, 6, 9]
+source1 == source2 -> False
+
+source1 = []
+source2 = []
+source1 == source2 -> True
+
+source1 = [2]
+source2 = []
+source1 == source2 -> False
+
+
+Test Clean
+source = [1, 5, 10, 10]
+source.clean() -> [1, 5, 10]
+
+source = [10, 10]
+source.clean() -> [10]
+
+source = [10]
+source.clean() -> [10]
+
+source = []
+source.clean() -> []
+
+source = [-2, -1, 1, 2]
+source.clean() -> [-2, -1, 1, 2]
+
+source = [1, 2, 2, 2, 3, 4, 6, 6, 7, 22, 22]
+source.clean() -> [1, 2, 3, 4, 6, 7, 22]
+
+
+Test Count
+source = [2, 3, 3, 3, 4, 6, 7]
+source.count(3) -> 3
+
+source = [1, 2, 3]
+source.count(0) -> 0
+
+source = []
+source.count(4) -> 0
+
+
+Test Find
+source = [2, 3, 3, 3, 4, 6, 7]
+source.find(0) -> None
+
+source = [1, 2, 3, 4]
+source.find(2) -> 2
+
+source = []
+source.find(0) -> None
+
+
+Test Intersection
+source1 = [0, 6, 9]
+source2 = [2, 6, 9]
+intersection(source1, source2) -> [6, 9]
+
+source1 = [1, 2, 3]
+source2 = [4, 5, 6]
+intersection(source1, source2) -> []
+
+source1 = [2, 2, 4, 8, 12]
+source2 = [1, 2, 2, 4, 12]
+intersection(source1, source2) -> [2, 4, 12]
+
+source1 = []
+source2 = []
+intersection(source1, source2) -> []
+
+
+Test Max
+source = [-7, 2, 2, 3, 3, 4]
+source.max() -> 4
+
+source = [2, 2, 3, 3, 4, 10, 10]
+source.max() -> 10
+
+source = []
+source.max() -> Cannot Find Maximum of an Empty List
+
+
+Test Min
+source = [-7, 2, 2, 3, 3, 4]
+source.min() -> -7
+
+source = [2, 2, 3, 3, 4, 10, 10]
+source.min() -> 2
+
+source = []
+source.min() -> Cannot Find Minimum of an Empty List
+
+
+Test Peek
+source = [-7, 2, 2, 3, 3, 4]
+source.peek() -> -7
+
+source = [2, 2, 3, 3, 4, 10, 10]
+source.peek() -> 2
+
+source = []
+source.pek() -> Cannot Peek at an Empty List
+
+
+Test Remove
+source = [2, 2, 3, 3, 4, 10, 10]
+source.remove(9) -> [2, 2, 3, 3, 4, 10, 10] returns None
+source.remove(10) -> [2, 2, 3, 3, 4, 10] returns 10
+source.remove(4) -> [2, 2, 3, 3, 10, 10] returns 4
+
+source = [1, 1, 1]
+source.remove(1) -> [1, 1] returns 1
+
+source = []
+source.remove(0) -> [] returns None
+
+
+Test Remove Front
+source = [2, 2, 3, 3, 4, 10, 10]
+source.remove_front() -> [2, 3, 3, 4, 10, 10] returns 2
+
+source = [1, 1, 1]
+source.remove_front() -> [1, 1] returns 1
+
+source = []
+source.remove_front() -> Cannot Remove from an Empty List
+
+source = [0]
+source.remove_front() -> [] returns 0
+
+
+Test Remove Many
+source = [2, 2, 3, 3, 4, 10, 10]
+source.remove_many(10) -> [2, 2, 3, 3, 4]
+
+source = [1, 1, 1]
+source.remove_many(1) -> []
+
+source = [2, 3, 4, 10]
+source.remove(2) -> [3, 4, 10]
+
+source = []
+source.remove(0) -> []
+
+
+Test Split
+source = [2, 2, 3, 3, 4, 10, 10]
+source.split() -> List 1: [2, 2, 3, 3] - List 2: [4, 10, 10]
+
+source = []
+source.split() -> List 1: [] - List 2: []
+
+source = [1]
+source.split() -> List 1: [1] - List 2: []
+
+
+Test Split Alt
+source = [2, 2, 3, 3, 4, 10, 10]
+source.split_alt() -> List 1: [2, 3, 4, 10] - List 2: [2, 3, 10]
+
+source = [1, 2, 3, 4, 5, 10, 12]
+source.split_alt() -> List 1: [1, 3, 5, 12] - List 2: [2, 4, 10]
+
+source = [1, 2, 3, 4, 5, 10, 12, 14]
+source.split_alt() -> List 1: [1, 3, 5, 12] - List 2: [2, 4, 10, 14]
+
+source = [1]
+source.split_alt() -> List 1: [1] - List 2: []
+
+source = []
+source.split_alt() -> List 1: [] - List 2: []
+
+
+Test Union
+source1 = [2, 2, 4, 8, 12]
+source2 = [1, 2, 2, 4, 12]
+union(source1, source2) -> [1, 2, 4, 8, 12]
+
+source1 = [1, 2, 3, 4, 9]
+source2 = [5, 6, 6, 8, 13]
+union(source1, source2) -> [1, 2, 3, 4, 5, 6, 8, 9, 13]
+
+source1 = []
+source2 = [5, 6, 6, 8, 13]
+union(source1, source2) -> [5, 6, 8, 13]
+
+source1 = [1, 2, 3, 4, 9]
+source2 = []
+union(source1, source2) -> [1, 2, 3, 4, 9]
+
+source1 = []
+source2 = []
+union(source1, source) -> []
+-------------------------------------------------------
+
+-------------------------------------------------------
