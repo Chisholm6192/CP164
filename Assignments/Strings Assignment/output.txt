@@ -1,0 +1,117 @@
+Ryan Chisholm
+chis7577@mylaurier.ca
+
+CP 164 B
+Lab Section 3
+
+Assignment 1
+
+Task 1
+values = [5,4,6,7]
+clean_list(values)
+print(values)
+
+OUTPUT:
+[5, 4, 6, 7]
+
+
+
+Task 2
+fv = open('words.txt', 'r', encoding = 'utf-8')
+fv_list = list(fv)
+u, l, d, w, r = file_analyze(fv_list)
+print(u, l, d, w, r)
+fv.close()
+
+OUTPUT:
+10 155 9 39 7
+
+
+
+Task 3
+locations = find_subs('Searching for substrings', 'ing')
+print(locations)
+
+OUTPUT:
+[6]
+
+
+
+Task 4
+leap_year = is_leap_year(2004)
+print(leap_year)
+
+OUTPUT:
+True
+
+
+
+Task 5
+valid = is_valid('check_temp')
+print(valid)
+
+OUTPUT:
+True
+
+
+
+Task 6
+b = matrix_transpose([[1,2,9], [3,4,10], [5,6,11], [7,8,12]])
+print(b)
+
+OUTPUT:
+[[1, 3, 5, 7], [2, 4, 6, 8], [9, 10, 11, 12]]
+
+
+
+Task 7
+c = matrixes_multiply([[1,2,3,1],[4,5,6,1],[7,8,9,1],[1,2,3,4],[5,6,7,8]], [[7,8,15,19,1,1,32],[9,10,14,20,1,3,6],[11,12,13,21,4,8,3],[16,17,18,22,4,9,3]])
+print(c)
+
+OUTPUT:
+[[74, 81, 100, 144, 19, 40, 56], [155, 171, 226, 324, 37, 76, 179], [236, 261, 352, 504, 55, 112, 302], [122, 132, 154, 210, 31, 67, 65], [294, 320, 394, 538, 71, 151, 241]]
+
+
+
+
+Task 8
+pl = pig_latin('movie')
+print(pl)
+
+OUTPUT:
+oviemay
+
+
+
+
+Task 9
+words = open('pelee.txt', 'r', encoding = 'utf-8')
+shifted_txt = open('shift.txt', 'w', encoding = 'utf-8')
+
+words_list = list(words)
+words_list = " ".join(words_list)
+estring = shift(words_list, 10)
+shifted_txt.write(estring)
+
+words.close()
+shifted_txt.close()
+
+OUTPUT:
+To file:
+SD KZZOKBC DRKD YXDKBSY'C ZYSXD ZOVOO XKDSYXKV ZKBU RKC VYCD SDC ZYSXD. DRO CYEDROBXWYCD 
+ DSZ YP MKXKNK SC SX DRO ZKBU, XOKB DRO DYGX YP VOKWSXQDYX. DROBO RKFO KVGKIC LOOX COFOBKV 
+ REXNBON WODBOC YP CKXN TEDDSXQ YED PBYW DRO WKSXVKXN. LED ZKBU YPPSMSKVC CKI BOMOXD RSQR 
+ GSXNC RKFO GKCRON KGKI DRO CKXN ZYSXD KXN KVV DRKD BOWKSXC SC K ZVKDPYBW. DRO ZKBU KNFOBDSCOC 
+ SDCOVP KC DRO CYEDROBXWYCD DSZ YP MKXKNK'C WKSXVKXN, KD DRO CKWO VKDSDENO KC XYBDROBX 
+ MKVSPYBXSK, KXN KDDBKMDC WYBO DRKX 400,000 FSCSDYBC ZOB IOKB. K ZKBU YPPSMSKV CKIC K XY 
+ CGSWWSXQ CSQX DRKD ECON DY WKBU DRO CYEDROBXWYCD ZYSXD GKCRON EZ YX K LOKMR SX WKNSCYX, YRSY, 
+ KLYED 100 USVYWODBOC KMBYCC VKUO OBSO. YPPSMSKVC CKI DRO CKXN ZKDDOBXC KD DRO ZYSXD MRKXQO 
+ PBOAEOXDVI, LED DRSC SC DRO PSBCD DSWO DRO ZYSXD RKC NSCKZZOKBON MYWZVODOVI.
+
+
+
+
+test = shift('Hello World', 4)
+
+OUTPUT:
+LIPPS ASVPH
